@@ -13,4 +13,5 @@ public class Constantes {
 	public static final int INDICE_COLUNA_MOEDA = 2;
 	public static final int INDICE_COLUNA_HORA = 1;
 	public static final int INDICE_COLUNA_DATA = 0;
+	public static final String RESOURCES_BITCOIN_LOGO_PNG = "resources/bitcoin-logo.png";
 }

@@ -3,9 +3,12 @@ package groff.monitorBitcoin.model.entity;
 import java.util.Calendar;
 import java.util.Date;
 
+import groff.monitorBitcoin.model.enums.SituacaoMoeda;
+
 public class DadosBitcoinVO {
 
 	private String tendencia;
+	private SituacaoMoeda situacao;
 	private Float valor;
 	private String moeda;
 	private Calendar data;
@@ -40,6 +43,14 @@ public class DadosBitcoinVO {
 
 	public void setData(Calendar data) {
 		this.data = data;
+	}
+
+	public SituacaoMoeda getSituacao() {
+		return situacao;
+	}
+
+	public void setSituacao(SituacaoMoeda situacao) {
+		this.situacao = situacao;
 	}
 
 }

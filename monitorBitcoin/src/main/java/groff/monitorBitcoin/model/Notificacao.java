@@ -70,8 +70,8 @@ public class Notificacao {
 		trayIcon.setImageAutoSize(autoDimensionamento);
 	}
 	
-	public void exibirNotificacao(String titulo, StringBuilder stringBuilder, TrayIcon trayIcon) {
-		trayIcon.displayMessage(titulo, stringBuilder.toString(), MessageType.INFO);
+	public void exibirNotificacao(String titulo, String stringBuilder, TrayIcon trayIcon, MessageType tipoMensagem) {
+		trayIcon.displayMessage(titulo, stringBuilder, tipoMensagem);
 	}
 	
 	public boolean suportaNotificacao() {
