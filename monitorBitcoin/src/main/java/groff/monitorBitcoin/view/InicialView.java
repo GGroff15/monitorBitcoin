@@ -5,6 +5,8 @@ import java.awt.Frame;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.VerifyEvent;
+import org.eclipse.swt.events.VerifyListener;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.layout.RowData;
@@ -127,6 +129,17 @@ public class InicialView {
 
 		textMinimo = new Text(compositeValores, SWT.BORDER);
 		textMinimo.setBounds(92, 32, 76, 21);
+		textMinimo.addVerifyListener(new VerifyListener() {
+			
+			@Override
+			public void verifyText(VerifyEvent entrada) {
+				
+				String string = entrada.text;
+				entrada.doit = string.matches("\\d*");
+				return;
+				
+			}
+		});
 	}
 
 	private void criarCampoValorMaximo() {
@@ -136,6 +149,17 @@ public class InicialView {
 
 		textMaximo = new Text(compositeValores, SWT.BORDER);
 		textMaximo.setBounds(92, 7, 76, 21);
+		textMaximo.addVerifyListener(new VerifyListener() {
+			
+			@Override
+			public void verifyText(VerifyEvent entrada) {
+				
+				String string = entrada.text;
+				entrada.doit = string.matches("\\d*");
+				return;
+				
+			}
+		});
 	}
 
 	private void criarBotaoIniciarParar() {
