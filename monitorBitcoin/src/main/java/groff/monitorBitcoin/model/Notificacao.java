@@ -10,6 +10,8 @@ import java.awt.TrayIcon;
 import java.awt.TrayIcon.MessageType;
 import java.awt.event.ActionListener;
 
+import groff.monitorBitcoin.model.entity.Constantes;
+
 public class Notificacao {
 	
 	public SystemTray criarSystemTray() {
@@ -23,7 +25,7 @@ public class Notificacao {
 	}
 	
 	public TrayIcon criarTrayIcon(SystemTray tray, Image image, PopupMenu popup) {
-		TrayIcon trayIcon = new TrayIcon(image, "Bitcoin Watcher Notif", popup);
+		TrayIcon trayIcon = new TrayIcon(image, Constantes.BITCOIN_WATCHER_NOTIF, popup);
 		try {
 			tray.add(trayIcon);
 		} catch (AWTException e) {
@@ -33,7 +35,7 @@ public class Notificacao {
 	}
 	
 	public TrayIcon criarTrayIcon(SystemTray tray, Image image) {
-		TrayIcon trayIcon = new TrayIcon(image, "Bitcoin Watcher Notif");
+		TrayIcon trayIcon = new TrayIcon(image, Constantes.BITCOIN_WATCHER_NOTIF);
 		try {
 			tray.add(trayIcon);
 		} catch (AWTException e) {
