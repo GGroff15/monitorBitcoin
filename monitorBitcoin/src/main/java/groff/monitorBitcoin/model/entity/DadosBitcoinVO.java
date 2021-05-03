@@ -1,7 +1,6 @@
 package groff.monitorBitcoin.model.entity;
 
 import java.util.Calendar;
-import java.util.Date;
 
 import groff.monitorBitcoin.model.enums.SituacaoMoeda;
 
